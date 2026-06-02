@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador - Vientos sin Fronteras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <header id="top-bar" class="hidden">
+            <div id="current-role-display">Rol: Ninguno</div>
+            <button id="btn-change-role">Cambiar Rol</button>
+            <div id="score-display">0 pts</div>
+            <div id="timer-display">15:00</div>
+        </header>
+
+        <section id="screen-lobby" class="screen">
+            <h2>Sala de espera</h2>
+            <ul id="player-list"></ul>
+            <button id="btn-start-game">Iniciar Partida</button>
+        </section>
+
+        <section id="screen-roles" class="screen hidden">
+            <h2>Elegí un rol para continuar</h2>
+            <div class="role-grid">
+                <button class="role-card" data-role="panel">Operario Panel de Control</button>
+                <button class="role-card" data-role="aero">Aerogenerador</button>
+                <button class="role-card" data-role="tecnico">Técnico Especialista</button>
+                <button class="role-card" data-role="programador">Programador</button>
+                <button class="role-card" data-role="distribuidor">Distribuidor de Energía</button>
+            </div>
+        </section>
+
+        <section id="role-panel" class="screen hidden role-view">
+            <h3>Panel de Control</h3>
+            <div class="dashboard">
+                <div class="sensor">Dirección del viento: <span id="viento-dir">N</span></div>
+                <div class="sensor">Carga Transformador: <span id="trans-carga">0%</span></div>
+                <div class="alert-box" id="panel-alertas">Alertas: Ninguna</div>
+            </div>
+        </section>
+        
+        <section id="role-aero" class="screen hidden role-view"><h3>Aerogenerador (Aquí va ml5.js)</h3></section>
+        <section id="role-tecnico" class="screen hidden role-view"><h3>Documentación Técnica</h3></section>
+        <section id="role-programador" class="screen hidden role-view"><h3>Programador (Aquí va Blockly)</h3></section>
+        <section id="role-distribuidor" class="screen hidden role-view"><h3>Distribución de Zonas</h3></section>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
